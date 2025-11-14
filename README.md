@@ -5,7 +5,7 @@ Change logging verbosity application-wide.
 ## Description
 
 This plugin provides a user interface to adjust logging verbosity levels for three different output channels:
-- **Logfile**: Controls verbosity for log files
+- **Logfile**: Controls verbosity for log files (written to the tablet's internal storage)
 - **Console**: Controls verbosity for console output
 - **Android**: Controls verbosity for Android logcat
 

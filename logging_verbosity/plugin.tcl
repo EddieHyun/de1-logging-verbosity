@@ -29,11 +29,11 @@ namespace eval ::plugins::${plugin_name} {
 
     proc create_ui {} {
         if {[array size ::plugins::logging_verbosity::settings] == 0} {
-            # default settings: INFO, DEBUG, DEBUG
+            # default settings would be: INFO, DEBUG, DEBUG
             array set ::plugins::logging_verbosity::settings {
-                file_verbosity 6
-                console_verbosity 7
-                android_verbosity 7
+                file_verbosity $::logging::severity_limit_logfile
+                console_verbosity $::logging::severity_limit_console
+                android_verbosity $::logging::severity_limit_android
             }
         }
         dui page add logging_settings -namespace [namespace current]::logging_settings -bg_img settings_message.png -type fpdialog
